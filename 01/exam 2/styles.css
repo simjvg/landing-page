@@ -1,0 +1,27 @@
+.user-card {
+    background-color: #dadada;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+}
+
+.rounded-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.get-user-btn
+/* No pude central el boton */
+{
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+}
+
+#user-gender.male {
+    color: blue; /* Color azul para genero "male" */
+}
+
+#user-gender.female {
+    color: pink; /* Cambia a rosa si el género es "female" */
+}

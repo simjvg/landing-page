@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            max-width: 1366px;
+            margin: 0 auto; /* Centrar el contenido */
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        article {
+            width: 24%; /* Mostrar 4 en una fila en pantallas grandes */
+            margin: 10px 0;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+
+        @media screen and (max-width: 768px) {
+            article {
+                width: 49%; /* Mostrar 2 en una fila en pantallas pequeñas */
+            }
+        }
+
+        article img {
+            width: 100%;
+        }
+
+        .product-title {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .product-description {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .product-price {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>GALERIA</h1>
+    <div class="container">
+        <div class="product-container" id="product-container"></div>
+    </div>
+
+    <script>
+        // Obtener datos de la API
+        fetch('https://dummyjson.com/products')
+            .then(response => response.json())
+            .then(data => {
+                const productContainer = document.getElementById('product-container');
+                
+                data.forEach(productData => {
+                    const articleElement = document.createElement('article');
+
+                    const productImage = document.createElement('img');
+                    productImage.src = productData.thumbnail;
+                    articleElement.appendChild(productImage);
+
+                    const productTitle = document.createElement('div');
+                    productTitle.classList.add('product-title');
+                    productTitle.textContent = productData.title;
+                    articleElement.appendChild(productTitle);
+
+                    const productDescription = document.createElement('div');
+                    productDescription.classList.add('product-description');
+                    productDescription.textContent = productData.description;
+                    articleElement.appendChild(productDescription);
+
+                    const productPrice = document.createElement('div');
+                    productPrice.classList.add('product-price');
+                    productPrice.textContent = `S/. ${productData.price}`;
+                    articleElement.appendChild(productPrice);
+
+                    productContainer.appendChild(articleElement);
+                });
+            });
+    </script>
+</body>
+</html>

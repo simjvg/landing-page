@@ -1,0 +1,15 @@
+*
+{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+.ul
+{
+    text-align: center;
+    padding: 8px;
+}
+#lista li
+{
+    color: yellow;
+}
