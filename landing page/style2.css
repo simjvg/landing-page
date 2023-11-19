@@ -1,0 +1,115 @@
+/* Estilos para el enlace de contacto */
+.cont {
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .cont:hover {
+    transform:scale3d(1,1)
+
+  }
+  
+  /* Otros estilos para el banner y el resto de la página */
+  /* ... */
+/* Estilos para la barra de navegación */
+.pestaña {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .pestaña ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .pestaña ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .pestaña ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Estilos para la sección de presentación */
+  .presentacion {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .presentacion img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Estilos para el menú */
+  .menu {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Estilos para el banner de productos */
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .producto {
+    flex-basis: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: all 0.3s ease; /* Transición suave de 0.3 segundos */
+  }
+  
+  .producto img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    transition: all 0.3s ease; /* Transición suave de 0.3 segundos */
+    max-height: 200px; /* Establecer un tamaño máximo para las imágenes */
+  }
+  
+  .producto h3 {
+    margin-bottom: 5px;
+  }
+  
+  .producto p {
+    font-weight: bold;
+  }
+  
+  /* Aplicar estilos al hacer hover sobre el producto */
+  .producto:hover {
+    transform: scale(1.1); /* Aumentar el tamaño al hacer hover */
+    opacity: 1; /* Hacer el producto completamente visible al hacer hover */
+  }
+  
+  .producto:hover img {
+    filter: brightness(100%); /* Mantener la imagen con brillo normal al hacer hover */
+  }
+  /* Estilos para el botón de Amazon */
+  .amazon-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .amazon-button:hover {
+    background-color: #0062cc;
+  }
