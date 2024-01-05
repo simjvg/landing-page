@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Satisfy&display=swap');
 /* Estilos para el enlace de contacto */
-.cont {
-    position: relative;
-    transition: transform 0.3s ease;
-  }
+.Contacto {
+  font-family: 'Dancing Script', cursive;
+  position: relative;
+  transition: transform 0.3s ease;
+  font-family: 'Times New Roman', Times, serif;
+}
   
-  .cont:hover {
+.Contacto:hover {
     transform:scale3d(1,1)
 
   }
@@ -17,6 +21,8 @@
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    border-radius: 5px;
+    background: linear-gradient(to right, #8B4513, #FFA500);
   }
   
   .pestaña ul {
@@ -31,35 +37,55 @@
   
   .pestaña ul li a {
     color: #fff;
-    text-decoration: none;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    text-align: right;
+    transition: transform 0.3 ease;
+  }
+
+  .pestaña:hover ul li a {
+    transform: scale(1,1);
   }
   
   /* Estilos para la sección de presentación */
   .presentacion {
-    text-align: center;
+    display: flex;
+    text-align: left;
     margin-top: 20px;
+    background-color: black;
   }
   
   .presentacion img {
     max-width: 100%;
     height: auto;
+    background-color: black;
+
   }
   
   /* Estilos para el menú */
-  .menu {
+.menu {
     text-align: center;
     margin-top: 20px;
+    font-family: 'Satisfy', cursive;
   }
+
+  .menu_prob
+    {
+      color: white;
+    }
   
   /* Estilos para el banner de productos */
 .banner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f2f2f2;
-    padding: 20px;
-    border-radius: 5px;
+  display: flex;
+  background-color: #f2f2f2;
+  padding: 4px;
+  border-radius: 50px;
+  align-items: baseline;
+  align-content: space-around;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-family:'Satisfy';
+
   }
   
   .producto {
@@ -70,6 +96,8 @@
     margin-bottom: 20px;
     text-align: center;
     transition: all 0.3s ease; /* Transición suave de 0.3 segundos */
+    -webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: shadow-drop-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
   
   .producto img {
@@ -113,3 +141,40 @@
   .amazon-button:hover {
     background-color: #0062cc;
   }
+  /* Estilo del precio */
+
+  .precio {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    background-color: #ffca07;/*amarillo*/
+    color: #fff;/*Blanco*/
+    border-radius: 20px; /* Borde redondeado */
+    padding: 5px 15px; /* Espaciado interno */
+    margin-top: 10px; /* Espaciado superior */
+    font-weight: bold; /* Texto Negrita */
+    transition: all 0.3s ease; /* ransicion Suave de 0.3 Segundo */
+  }
+
+  .producto:hover .precio {
+      background-color: #fd3e0e; /* Cambia el color al hacer hover */
+    }
+/* Checking de Contacto */
+.validacion {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.valido {
+  background-color: #4CAF50; /* Verde */
+  border-color: #4CAF50;
+}
+.franja_inferior
+{
+  height: 20px;
+  background: linear-gradient(to right, #8B4513, #FFA500);
+}

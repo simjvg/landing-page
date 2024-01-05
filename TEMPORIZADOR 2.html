@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Temporizador</title>
+</head>
+<body>
+  <h1>Temporizador</h1>
+  <label for="datetime">Introduce la fecha y hora objetivo:</label>
+  <input type="datetime-local" id="datetime" name="datetime">
+  <button onclick="startTimer()">Comenzar</button>
+  <p id="countdown"></p>
+  <script>
+    function startTimer() {
+      // Obtiene la fecha y hora objetivo del campo de entrada
+      var countDownDate = new Date(document.getElementById("datetime").value).getTime();
+
+      // Actualiza el temporizador cada segundo
+      var x = setInterval(function() {
+
+        // Obtiene la fecha y hora actual
+        var now = new Date().getTime();
+
+        // Calcula la diferencia entre la fecha y hora objetivo y la fecha y hora actual
+        var distance = countDownDate - now;
+
+        // Calcula los días, horas, minutos y segundos restantes
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Muestra el resultado en un elemento HTML
+        document.getElementById("countdown").innerHTML = "Faltan " + days + " días, " + hours + " horas, " + minutes + " minutos y " + seconds + " segundos para la fecha y hora objetivo.";
+
+        // Si el temporizador llega a cero, muestra un mensaje
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("countdown").innerHTML = "¡Se acabó el tiempo!";
+        }
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap')
+
+* {
+  background-color: #000; /* Puedes ajustar el color a tu preferencia */
+  color: #fff; /* Color del texto para asegurar la legibilidad en el fondo oscuro */
+  margin: 0; /* Elimina el margen predeterminado del cuerpo */
+  padding: 0; /* Elimina el relleno predeterminado del cuerpo */
+}
+
+/* Estilos para el enlace de contacto */
+.Contacto {
+  font-family: 'Raleway', cursive;
+  position: relative;
+  transition: transform 0.3s ease;
+  }
+  
+.Contacto:hover {
+    transform:scale3d(1,1)
+
+  }
+  
+  /* Otros estilos para el banner y el resto de la página */
+  /* ... */
+/* Estilos para la barra de navegación */
+.pestaña {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    background: linear-gradient(to right, #000000, #270731);
+  }
+   
+  /* Estilos para la sección de presentación */
+  .presentacion {
+    display: flex;
+    justify-content: center; /* Centrar la imagen horizontalmente */
+    align-items: center; /* Centrar la imagen verticalmente */
+    height: 100vh; /* Establecer la altura del contenedor al 100% del viewport height */
+    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+}
+
+.presentacion img {
+    width: 100%; /* Hacer que la imagen ocupe el 100% del ancho del contenedor */
+    height: auto; /* Mantener la proporción original de la imagen */
+}
+.texto-encima  {
+  position: absolute;
+  top: 50%; /* Coloca el texto en la mitad superior del contenedor */
+  left: 15%; /* Coloca el texto en la mitad izquierda del contenedor */
+  transform: translate(-50%, -50%); /* Centra el texto */
+  color: white; /* Color del texto */
+  font-family: Raleway;
+  font-size: 24px;
+ }
+  /* Estilos para el menú */
+.menu {
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Satisfy', cursive;
+  }
+
+  .menu_prob
+    {
+      color: white;
+    }
+  
+  /* Estilos para el banner de productos */
+  
+  .producto {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .product {
+    border: 1px solid gray;
+    box-shadow: 4px 1px 5px 0px rgba(0,0,0,0.25);
+    border-radius: 8px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    height: auto;
+    transition: .3s all;
+  }
+  .product-item {
+    border: 1px solid gray;
+    box-shadow: 4px 1px 5px 0px rgba(0,0,0,0.25);
+    border-radius: 8px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    height: auto;
+    transition: .3s all;
+  }
+  
+  .product-item.m-click,
+  .product-item.m-click:visited,
+  .product-item.m-click:focus,
+  .product-item.m-click:target {
+    text-decoration: none;
+  }
+  
+  .product-item.m-click:hover {
+    transform: scale(1.01);
+    box-shadow: 4px 1px 42px 0px rgba(0,0,0,0.35);
+  }
+  
+  .product-item_content p, .product-item_content b {
+    color: black;
+  }
+  
+  .product-item:hover .product-item_content a {
+    opacity: 1;
+  }
+  
+  .product-item_img {
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 250px;
+  }
+  
+  .product-item_content {
+    padding: 16px;
+  }
+  
+  .product-item_content h4 {
+    font-size: 18px;
+    color: gray;
+  }
+  
+  .product-item_content a {
+    background-color: blue;
+    text-decoration: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: .3s all;
+    margin-bottom: 15px;
+    opacity: 0;
+  }
+  
+  .product-item_content a:hover {
+    opacity: 1;
+  }
+  .texto-encima {
+    justify-content: flex-end;
+  }
+  /* Estilos para el botón de Amazon */
+  .amazon-button {
+    font-family: Raleway;
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+  
+  .amazon-button:hover {
+    background-color: #0062cc;
+  }
+  /* Estilo del btnamazon */
+
+  .btnamazon {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    background-color: #ffca07;/*amarillo*/
+    color: #fff;/*Blanco*/
+    border-radius: 20px; /* Borde redondeado */
+    padding: 5px 15px; /* Espaciado interno */
+    margin-top: 10px; /* Espaciado superior */
+    font-weight: bold; /* Texto Negrita */
+    transition: all 0.3s ease; /* ransicion Suave de 0.3 Segundo */
+  }
+
+  .producto:hover .btnamazon {
+      background-color: #fd3e0e; /* Cambia el color al hacer hover */
+    }
+/* Checking de Contacto */
+.validacion {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.valido {
+  background-color: #4CAF50; /* Verde */
+  border-color: #4CAF50;
+}
+.franja_inferior
+{
+  height: 20px;
+  background: linear-gradient(to right, #8B4513, #FFA500);
+}
